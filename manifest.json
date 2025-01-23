@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "楽天からクリックポストへのスムーズコピー＆ペースト",
-  "version": "0.0.0.1",
+  "version": "0.0.0.2",
   "description": "楽天市場の送付先情報をコピーして、クリックポストの各入力欄へワンクリックでペースト。",
   "permissions": ["storage"],
   "action": {
