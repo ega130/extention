@@ -16,6 +16,10 @@
       "js": ["copy.js", "toast.js"]
     },
     {
+      "matches": ["https://order-rp.rms.rakuten.co.jp/order-rb/order-list-sc/*"],
+      "js": ["track_shipments.js"]
+    },
+    {
       "matches": ["https://clickpost.jp/*"],
       "js": ["paste.js", "toast.js"]
     }
