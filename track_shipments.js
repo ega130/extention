@@ -1,6 +1,7 @@
 // 配送業者ごとのURLテンプレート
 const CARRIER_URLS = {
-  japanpost: "https://www.post.japanpost.jp/receive/tracking/result.php?code={number}",
+  japanpost:
+    "https://trackings.post.japanpost.jp/services/srv/search/direct?searchKind=S002&locale=ja&reqCodeNo1={number}",
   sagawa: "https://k2k.sagawa-exp.co.jp/p/web/okurijosearch.do?okurijoNo={number}",
   yamato: "https://map.yahoo.co.jp/delivery?number={number}&fr=yamato_tracking_ymap",
 };
