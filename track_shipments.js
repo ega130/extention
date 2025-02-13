@@ -100,11 +100,33 @@ function addTrackingLinks() {
 }
 
 /**
- * 指定した遅延時間のあとにリンク処理を実行
+ * [data-sort-column="shippingDate"] の内容が本日（YYYY-MM-DD）と一致していたら
+ * 「本日」と表示し、指定スタイルを適用する
+ */
+function highlightTodayShippingDates() {
+  // 今日の日付を "YYYY-MM-DD" 形式で取得
+  const today = new Date().toISOString().split("T")[0];
+
+  const dateElements = document.querySelectorAll('[data-sort-column="shippingDate"]');
+  dateElements.forEach((element) => {
+    if (element.textContent.trim() === today) {
+      element.textContent = "TODAY";
+      Object.assign(element.style, {
+        fontSize: "30px",
+        textDecoration: "underline orange 5px",
+        margin: "10px 0 13px",
+      });
+    }
+  });
+}
+
+/**
+ * 指定した遅延時間のあとにリンク処理 + 日付ハイライトを実行
  */
 function addLinksWithDelay(delay) {
   setTimeout(() => {
     addTrackingLinks();
+    highlightTodayShippingDates();
   }, delay);
 }
 
