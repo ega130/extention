@@ -22,6 +22,10 @@
     {
       "matches": ["https://clickpost.jp/*"],
       "js": ["paste.js", "toast.js"]
+    },
+    {
+      "matches": ["https://clickpost.jp/mypage/index*"],
+      "js": ["fetch.js"]
     }
   ]
 }
