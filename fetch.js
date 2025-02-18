@@ -60,4 +60,6 @@ function fetchTransactionDates() {
   });
 }
 
-fetchTransactionDates();
+document.addEventListener("turbo:load", function () {
+  fetchTransactionDates();
+});
