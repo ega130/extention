@@ -37,6 +37,20 @@ function addCopyButton() {
 
     // 送付先情報の近くにボタンを追加
     targetElement.insertBefore(copyButton, targetElement.firstChild);
+
+    // 画面読み込み後1秒経過後に「crm-purchases-count」要素の回数をチェック
+    setTimeout(() => {
+      const countElement = document.querySelector(".crm-purchases-count");
+      if (countElement) {
+        // 例: "1回" や "2回" のような文字列から数字のみを抽出
+        const count = parseInt(countElement.innerText.replace(/[^0-9]/g, ""), 10);
+        if (count >= 2) {
+          countElement.style.fontSize = "100px";
+          countElement.style.fontWeight = "bold";
+          countElement.style.display = "block";
+        }
+      }
+    }, 1000);
   }
 }
 
