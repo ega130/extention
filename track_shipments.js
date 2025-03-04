@@ -51,6 +51,7 @@ function linkifyTrackingNumberElement(element, carrier) {
   link.href = urlTemplate.replace("{number}", number);
   link.target = "_blank";
   link.setAttribute("data-tracking-link", "true"); // 「このリンクは追跡リンクである」マーカー
+  link.tabIndex = 100;
 
   // スタイルを適用
   Object.assign(link.style, LINK_STYLES);
